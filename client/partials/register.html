@@ -1,0 +1,14 @@
+<!-- You will attach an ng-model and an ng-submit to your forms (but might want to wait until the next tab, when you have your controllers and factory) -->
+<div ng-controller = "registerController">
+<form ng-submit = "create()">
+  <h5>Please register so you can shop at our store!</h5>
+  First Name: <input type="text" ng-model = "newUser.first_name" >
+  Last Name: <input type="text" ng-model = "newUser.last_name" >
+    Email: <input type="text" ng-model = "newUser.email" >
+      Password: <input type="text" ng-model = "newUser.password" >
+      Re-enter Password: <input type="text" ng-model = "newUser.password_confimation" >
+  <input type="submit" value="Submit" >
+  <!-- Appropriate inputs here! -->
+</form>
+
+</div>
