@@ -4,6 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>Awesome Friends</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!-- Angular from bower_components, otherwise find the CDN -->
     <script src="angular/angular.js" charset="utf-8"></script>
     <script src="angular-route/angular-route.js" charset="utf-8"></script>
@@ -13,10 +21,77 @@
     <script src="assets/controllers/editController.js" charset="utf-8"></script>
     <script src="assets/controllers/newController.js" charset="utf-8"></script>
 
+    <style>
+    .main-banner {
+      background-image: url("https://image.freepik.com/free-vector/abstract-background-of-cyber-monday_23-2147576722.jpg");
+      background-size: 1150px;
+      background-position: center;
+    }
+    .item-box {
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      padding-top: 10px;
+    }
+    </style>
+
   </head>
   <body>
-    <h2>Welcome to Awesome Friends</h2>
-    <h5>Part of the Full Mean Project!</h5>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-light">
+        <a class="nav-link navbar-brand" href="#">Products</a>
+        <a class="nav-link navbar-brand" href="#">My Account</a>
+        <a class="nav-link navbar-brand" href="#">My Cart</a>
+    </nav>
+
+    <div class="jumbotron text-center main-banner">
+      <br>
+      <h2>Welcome to the Wholesale Store!</h2>
+      <p>Purchase supplies in bulk at the best discounts!</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 item-box">
+          <img src="http://yenra.com/conference-phone/conference-phone.jpg" width="90%" height="170">
+          <h3>Phone</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4 item-box">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/41BQNGEMSZL._SX450_.jpg" width="90%" height="170">
+          <h3>Fax Machine</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4 item-box">
+          <img src="http://www.geekrez.com/UploadImages/478871banner4.jpg" width="90%" height="170">
+          <h3>Printer</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 item-box">
+          <img src="http://s7d2.scene7.com/is/image/NationalBusinessFurniture/erc-13905_s7" width="90%" height="170">
+          <h3>Desk</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4 item-box">
+          <img src="https://ak1.ostkcdn.com/images/products/7986406/Office-Star-Pro-Line-II-Breathable-ProGrid-Ratchet-Back-Office-Chair-P15354508.jpg" width="90%" height="170">
+          <h3>Chair</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4 item-box">
+          <img src="https://s3.img-b.com/image/private/t_base,f_auto,c_lpad,h_800/product/LithoniaLighting/lithonia-lighting-2pm3n-g-b-3-32-18ld-mvol-21.jpg" width="90%" height="170">
+          <h3>Light </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+      </div>
+
+    </div>
 
     <a href="#!/new">New Friend</a>
 
