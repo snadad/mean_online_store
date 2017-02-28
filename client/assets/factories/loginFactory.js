@@ -1,5 +1,5 @@
-console.log('friendsFactory has started');
-app.factory('friendsFactory', ['$http', function($http) {
+console.log('loginFactory has started');
+app.factory('loginFactory', ['$http', function($http) {
   var factory = {};
   factory.index = function(callback) {
       //call this method if you want to update or set the friends variable
