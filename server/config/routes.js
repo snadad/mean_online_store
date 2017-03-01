@@ -6,12 +6,19 @@ var path = require('path')
 console.log('routes');
 module.exports = function(app){
 
-app.post('/newuser', function(request, response){
+
+app.post('/newuser', function(request, response) {
   user.create(request, response);
 });
+  
+app.post('/login', function(request, response){
+  user.login(request, response);
+})
+  
 app.post('/addproduct', function(request, response){
   product.addproduct(request, response);
 });
+  
 app.get('/getproducts', function(request, response){
   product.getproducts(request, response)
 });

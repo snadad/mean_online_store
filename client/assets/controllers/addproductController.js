@@ -5,11 +5,9 @@ app.controller('addProductController', ['$scope','productFactory','$routeParams'
     productFactory.addProduct($scope.newProduct, function(data){
       if (data.errors){
         $scope.errors = data.errors;
-        console.log(data.errors);
       }
       else{
         $location.url("/dashboard")
-
       }
     })
   }
