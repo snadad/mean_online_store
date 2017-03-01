@@ -3,15 +3,21 @@ var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
 module.exports = {
-  index: function(request,response){
-    User.find({}, function(err, data){
-      if (err){
-        console.log('there was a problem here');
+  create: function(request,response){
+    User.create(request.body, function(err, data){
+      if(err){
+        console.log('from server user',err);
+        response.json(err);
       }
       else{
-        response.json(data)
+        console.log('user created', data);
+        console.log('logging the id', data._id);
+        request.session.user_id = data._id;
+        request.session.first_name = data.first_name;
+        console.log(request.session);
+        response.json(data);
       }
-    })},
+    })
   // create: function(request,response){
   //   console.log('got to the create function in server', request.body);
   //   var newfriend = new Friend(request.body);
@@ -76,5 +82,5 @@ module.exports = {
   //       response.json(friend)
   //     }
 // })
- // }
+ }
 }
