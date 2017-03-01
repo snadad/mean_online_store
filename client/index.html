@@ -3,7 +3,7 @@
 <html ng-app = "app">
   <head>
     <meta charset="utf-8">
-    <title>Awesome Friends</title>
+    <title>Awesome Online Store</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,16 +40,17 @@
 
   </head>
   <body>
-
+Pa$$word1
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
         <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
         <a class="nav-link navbar-brand" href="#">My Cart</a>
         <a class="nav-link navbar-brand" href="#!/login">Login</a>
         <a class="nav-link navbar-brand" href="#!/register">Register</a>
+        <a class="nav-link navbar-brand" href="#!/addproduct">Add Product</a>
     </nav>
 
     <div ng-view = "">
     </div>
-
+{{request.session.first_name}}
   </body>
 </html>
