@@ -4,8 +4,8 @@ var path = require('path')
 
 console.log('routes');
 module.exports = function(app){
-app.get('/user', function(request, response) {
-  user.index(request, response);
+app.post('/newuser', function(request, response) {
+  user.create(request, response);
 });
 // app.get('/edit/:id', function(request, response) {
 //   friends.show(request, response);
