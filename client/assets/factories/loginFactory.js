@@ -1,13 +1,14 @@
 console.log('loginFactory has started');
 app.factory('loginFactory', ['$http', function($http) {
   var factory = {};
-  // factory.index = function(callback) {
-      //call this method if you want to update or set the friends variable
-  //     $http.get('/friends').then(function(returned_data){
-  //       console.log(returned_data.data);
-  //       callback(returned_data.data);
-  //     });
-  // }
+
+  factory.login = function(user, callback) {
+    $http.post('/login', user).then(function(response){
+      if(typeof callback === 'function'){
+        callback(response.data);
+      }
+    })
+  }
   factory.create = function(newUser, callback) {
     $http.post('/newuser', newUser).then(function(response){
       if(typeof callback === 'function'){
