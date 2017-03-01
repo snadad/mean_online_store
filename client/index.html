@@ -17,9 +17,9 @@
     <script src="angular-route/angular-route.js" charset="utf-8"></script>
     <!-- End Bower Components -->
     <script src="assets/app.js" charset="utf-8"></script>
-    <script src="assets/factories/friendsFactory.js" charset="utf-8"></script>
-    <script src="assets/controllers/editController.js" charset="utf-8"></script>
-    <script src="assets/controllers/newController.js" charset="utf-8"></script>
+    <script src="assets/factories/loginFactory.js" charset="utf-8"></script>
+    <script src="assets/controllers/loginController.js" charset="utf-8"></script>
+    <script src="assets/controllers/registerController.js" charset="utf-8"></script>
 
     <style>
     .main-banner {
@@ -32,68 +32,21 @@
       border-radius: 5px;
       padding-top: 10px;
     }
+    .register-box {
+      margin-top: 50px;
+      width: 300px;
+    }
     </style>
 
   </head>
   <body>
+
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
-        <a class="nav-link navbar-brand" href="#">Products</a>
-        <a class="nav-link navbar-brand" href="#">My Account</a>
+        <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
         <a class="nav-link navbar-brand" href="#">My Cart</a>
+        <a class="nav-link navbar-brand" href="#!/login">Login</a>
+        <a class="nav-link navbar-brand" href="#!/register">Register</a>
     </nav>
-
-    <div class="jumbotron text-center main-banner">
-      <br>
-      <h2>Welcome to the Wholesale Store!</h2>
-      <p>Purchase supplies in bulk at the best discounts!</p>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4 item-box">
-          <img src="http://yenra.com/conference-phone/conference-phone.jpg" width="90%" height="170">
-          <h3>Phone</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4 item-box">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/41BQNGEMSZL._SX450_.jpg" width="90%" height="170">
-          <h3>Fax Machine</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4 item-box">
-          <img src="http://www.geekrez.com/UploadImages/478871banner4.jpg" width="90%" height="170">
-          <h3>Printer</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-4 item-box">
-          <img src="http://s7d2.scene7.com/is/image/NationalBusinessFurniture/erc-13905_s7" width="90%" height="170">
-          <h3>Desk</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4 item-box">
-          <img src="https://ak1.ostkcdn.com/images/products/7986406/Office-Star-Pro-Line-II-Breathable-ProGrid-Ratchet-Back-Office-Chair-P15354508.jpg" width="90%" height="170">
-          <h3>Chair</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4 item-box">
-          <img src="https://s3.img-b.com/image/private/t_base,f_auto,c_lpad,h_800/product/LithoniaLighting/lithonia-lighting-2pm3n-g-b-3-32-18ld-mvol-21.jpg" width="90%" height="170">
-          <h3>Light </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-      </div>
-
-    </div>
-
-    <a href="#!/new">New Friend</a>
 
     <div ng-view = "">
     </div>

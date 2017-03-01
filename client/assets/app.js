@@ -2,14 +2,17 @@ console.log('app.js in assets has started');
 var app = angular.module('app', ['ngRoute']);
 app.config(function ($routeProvider) {
   $routeProvider
-    .when('/edit/:id',{
-      templateUrl: 'partials/edit.html',
-      controller : 'editController'
+    .when('/register', {
+      templateUrl: 'partials/register.html',
+      controller : 'registerController'
     })
-    .when('/new', {
-      templateUrl: 'partials/new.html',
-      controller : 'newController'
-
+    .when('/login',{
+      templateUrl: 'partials/login.html',
+      controller : 'loginController'
+    })
+    .when('/dashboard',{
+      templateUrl: 'partials/dashboard.html',
+      controller : 'dashboardController'
     })
     .otherwise({
       redirectTo: '/'
