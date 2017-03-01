@@ -6,6 +6,10 @@ app.config(function ($routeProvider) {
       templateUrl: 'partials/register.html',
       controller : 'registerController'
     })
+    .when('/addproduct', {
+      templateUrl: 'partials/addproduct.html',
+      controller : 'addProductController'
+    })
     .when('/login',{
       templateUrl: 'partials/login.html',
       controller : 'loginController'

@@ -1,0 +1,22 @@
+
+<div class="container register-box">
+
+  <form ng-submit = "addProduct()" >
+  Product Name: <input type="text" placeholder="Product Name" ng-model ="newProduct.name">
+  {{errors.name.message}}
+
+  Product Description: <input type="text" placeholder="Product Description" ng-model ="newProduct.description">
+  {{errors.description.message}}
+
+  Product Category: <input type="text" placeholder="Product Category" ng-model ="newProduct.category">
+  {{errors.category.message}}
+
+  Product Price: <input type="number" placeholder="Product Price" ng-model ="newProduct.price">
+  {{errors.price.message}}
+
+  Product Image Link: <input type="text" placeholder="Product Image Link" ng-model ="newProduct.image">
+  {{errors.image.message}}
+
+  <input type="submit" value="Submit">
+</form>
+</div>
