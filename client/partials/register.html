@@ -1,11 +1,33 @@
-<!-- You will attach an ng-model and an ng-submit to your forms (but might want to wait until the next tab, when you have your controllers and factory) -->
-
 <div class="container register-box">
 
 <h5>Register so you can shop at our store!</h5>
 <!-- <div ng-repeat = "error in errors" ng-bind="error.message"></div> -->
 <form ng-submit = "create()" method="post">
 <div class="form-group">
+<<<<<<< HEAD
+  <label for="first name">First Name: </label>
+  <input type="text" ng-model="newUser.first_name" class="form-control" placeholder="Enter first name">
+</div>
+
+<div class="form-group">
+  <label for="last name">Last Name: </label>
+  <input type="text" ng-model = "newUser.last_name"  class="form-control" placeholder="Enter last name">
+</div>
+
+<div class="form-group">
+  <label for="email">Email: </label>
+  <input type="text" ng-model = "newUser.email"  class="form-control" placeholder="Enter email">
+</div>
+
+<div class="form-group">
+  <label for="password">Password: </label>
+  <input type="text" ng-model = "newUser.password"  class="form-control" placeholder="Enter password">
+</div>
+
+<div class="form-group">
+  <label for="confirm password">Re-enter Password: </label>
+  <input type="text" ng-model = "newUser.password_confimation" class="form-control" placeholder="Re-enter password">
+
   <!-- <div ng-repeat = "error in errors" ng-bind="error.first_name.message"></div> -->
   First Name: <input type="text" ng-model="newUser.first_name" class="form-control" placeholder="Enter first name">
   {{errors.first_name.message}}

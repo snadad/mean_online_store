@@ -30,8 +30,12 @@
       background-position: center;
     }
     .item-box {
-      border: 1px solid lightgrey;
-      border-radius: 5px;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      padding-top: 10px;
+    }
+    .item-box-bottom {
+      border-bottom: 1px solid lightgrey;
       padding-top: 10px;
     }
     .register-box {
@@ -42,7 +46,7 @@
 
   </head>
   <body>
-Pa$$word1
+
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
         <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
         <a class="nav-link navbar-brand" href="#">My Cart</a>
@@ -53,6 +57,6 @@ Pa$$word1
 
     <div ng-view = "">
     </div>
-{{request.session.first_name}}
+
   </body>
 </html>
