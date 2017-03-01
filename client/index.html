@@ -22,6 +22,7 @@
     <script src="assets/controllers/loginController.js" charset="utf-8"></script>
     <script src="assets/controllers/addproductController.js" charset="utf-8"></script>
     <script src="assets/controllers/registerController.js" charset="utf-8"></script>
+    <script src="assets/controllers/dashboardController.js" charset="utf-8"></script>
 
     <style>
     body {
@@ -33,17 +34,8 @@
       background-position: center;
     }
     .item-box {
-      border-right: 1px solid lightgrey;
-      border-bottom: 1px solid lightgrey;
+      border: 1px solid lightgrey;
       padding-top: 10px;
-    }
-    .item-box-bottom {
-      border-bottom: 1px solid lightgrey;
-      padding-top: 10px;
-    }
-    .register-box {
-      margin-top: 50px;
-      width: 300px;
     }
     </style>
 
@@ -55,7 +47,7 @@
         <a class="nav-link navbar-brand" href="#">My Cart</a>
         <a class="nav-link navbar-brand" href="#!/login">Login</a>
         <a class="nav-link navbar-brand" href="#!/register">Register</a>
-        <!-- <a class="nav-link navbar-brand" href="#!/addproduct">Add Product</a> -->
+        <a class="nav-link navbar-brand" href="#!/addproduct">Add Product</a>
     </nav>
 
     <div ng-view = "">
