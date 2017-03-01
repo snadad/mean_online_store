@@ -16,7 +16,7 @@ app.config(function ($routeProvider) {
     })
     .when('/dashboard',{
       templateUrl: 'partials/dashboard.html',
-      controller : 'loginController'
+      controller : 'dashboardController'
     })
     .otherwise({
       redirectTo: '/'
