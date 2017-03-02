@@ -10,7 +10,7 @@ app.controller('loginController', ['$scope','loginFactory', '$location','$cookie
         var user_name = $cookieStore.get('user_name');
         $scope.logged_user = user_name;
         console.log($scope.logged_user);
-        $location.url('/')
+        $location.url('/dashboard')
       }
     })
   }
