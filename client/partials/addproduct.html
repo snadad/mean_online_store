@@ -1,22 +1,39 @@
 
-<div class="container register-box">
+<div class="container register-box ">
 
-  <form ng-submit = "addProduct()" >
-  Product Name: <input type="text" placeholder="Product Name" ng-model ="newProduct.name">
-  {{errors.name.message}}
+<form>
+  <div class="form-group">
+    <label for="product_name">Product Name: </label>
 
-  Product Description: <input type="text" placeholder="Product Description" ng-model ="newProduct.description">
-  {{errors.description.message}}
+    <input type="text" placeholder="Product Name" ng-model ="newProduct.name" class="form-control" id="product_name">
+    {{errors.name.message}}
 
-  Product Category: <input type="text" placeholder="Product Category" ng-model ="newProduct.category">
-  {{errors.category.message}}
+  </div>
 
-  Product Price: <input type="number" placeholder="Product Price" ng-model ="newProduct.price">
-  {{errors.price.message}}
+  <div class="form-group">
+    <label for="product_description" >Description: </label>
+    <input type="text" placeholder="Product Description" ng-model ="newProduct.description" class="form-control">
+    {{errors.description.message}}
+  </div>
 
-  Product Image Link: <input type="text" placeholder="Product Image Link" ng-model ="newProduct.image">
-  {{errors.image.message}}
+  <div class="form-group">
+    <label for="product_category" >Category: </label>
+    <input type="text" placeholder="Product Category" ng-model ="newProduct.category" class="form-control">
+    {{errors.category.message}}
+  </div>
 
-  <input type="submit" value="Submit">
-</form>
+  <div class="form-group">
+    <label for="product_price" >Item Price: </label>
+    <input type="number" placeholder="Product Price" ng-model ="newProduct.price" class="form-control">
+    {{errors.price.message}}
+  </div>
+
+  <div class="form-group">
+    <label for="product_image" >Image URL: </label>
+    <input type="text" placeholder="Product Image Url" ng-model ="newProduct.image" class="form-control">
+    {{errors.image.message}}
+  </div>
+
+  <button ng-click="addProduct()" class="btn btn-default">Add Product</button>
+  </form>
 </div>

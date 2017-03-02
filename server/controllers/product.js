@@ -16,12 +16,12 @@ module.exports = {
     })
   },
   index: function(request, response){
-    Product.find({}, function(err, topics){
+    Product.find({}, function(err, data){
       if(err){
         console.log("error: ", err);
       } else {
-        console.log("topics from DB: ", topics);
-        res.json( topics )
+        console.log("topics from DB: ", data);
+        response.json( data )
       }
     })
   }
