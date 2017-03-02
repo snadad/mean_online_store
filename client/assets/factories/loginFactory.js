@@ -5,10 +5,13 @@ app.factory('loginFactory', ['$http','$cookieStore', function($http, $cookieStor
   factory.login = function(user, callback) {
     $http.post('/login', user).then(function(response){
       if(typeof callback === 'function'){
-        $cookieStore.user_name = response.data.first_name;
-        $cookieStore.user_id = response.data._id;
-
-        callback(response.data, $cookieStore);
+        callback(response.data);
+        if (!response.data.errors){
+          console.log(response.data);
+          $cookieStore.put('user_name', response.data.first_name);
+          $cookieStore.put('user_id', response.data._id);
+          $cookieStore.put('userloggedin', true);
+        }
       }
     })
   }
@@ -16,6 +19,12 @@ app.factory('loginFactory', ['$http','$cookieStore', function($http, $cookieStor
     $http.post('/newuser', newUser).then(function(response){
       if(typeof callback === 'function'){
         callback(response.data);
+        if (!response.data.errors){
+          console.log(response.data);
+          $cookieStore.put('user_name', response.data.first_name);
+          $cookieStore.put('user_id', response.data._id);
+          $cookieStore.put('userloggedin', true);
+        }
       }
     })
   }

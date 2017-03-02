@@ -22,6 +22,7 @@
     <script src="assets/factories/loginFactory.js" charset="utf-8"></script>
     <script src="assets/factories/productFactory.js" charset="utf-8"></script>
     <script src="assets/controllers/loginController.js" charset="utf-8"></script>
+    <script src="assets/controllers/navController.js" charset="utf-8"></script>
     <script src="assets/controllers/addproductController.js" charset="utf-8"></script>
     <script src="assets/controllers/registerController.js" charset="utf-8"></script>
     <script src="assets/controllers/dashboardController.js" charset="utf-8"></script>
@@ -71,14 +72,19 @@ adminPa$$word1
   </head>
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-light bg-faded">
-        <a class="nav-link navbar-brand" href="#!/dashboard"  class="bg-faded">Products</a>
+
+<div ng-controller ="navController"
+    <nav class="navbar navbar-default navbar-fixed-top navbar-light">
+        <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
         <a class="nav-link navbar-brand" href="#">My Cart</a>
         <a class="nav-link navbar-brand" href="#!/login">Login</a>
         <a class="nav-link navbar-brand" href="#!/register">Register</a>
-        <a class="nav-link navbar-brand" href="#!/addproduct">Add Product</a>
+        <span ng-if = "addproductbutton">
+        <a  class="nav-link navbar-brand" href="#!/addproduct"><span ng-bind= "addproductbutton"></span></a>
+      </span>
     </nav>
-<h2>Welcome,</h2>
+</div>
+
     <div ng-view = "">
     </div>
 

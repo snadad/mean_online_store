@@ -11,9 +11,6 @@ module.exports = {
       }
       else{
         console.log('user created', data);
-        console.log('logging the id', data._id);
-        request.session.user_id = data._id;
-        request.session.user_name = data.first_name;
         response.json(data);
       }
     })
@@ -26,7 +23,7 @@ module.exports = {
       }
       else if (user === null){
         console.log('user not found',user);
-        response.json({errors:'User not found. Please register!'});
+        response.json({errors:'Please register!'});
       }
       else{
         if (user.password === request.body.password){

@@ -2,6 +2,7 @@ console.log('app.js in assets has started');
 var app = angular.module('app', ['ngRoute', 'ngCookies']);
 app.config(function ($routeProvider) {
   $routeProvider
+
     .when('/register', {
       templateUrl: 'partials/register.html',
       controller : 'registerController'
