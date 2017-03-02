@@ -7,7 +7,6 @@ app.factory('loginFactory', ['$http','$cookieStore', function($http, $cookieStor
       if(typeof callback === 'function'){
         $cookieStore.user_name = response.data.first_name;
         $cookieStore.user_id = response.data._id;
-
         callback(response.data, $cookieStore);
       }
     })

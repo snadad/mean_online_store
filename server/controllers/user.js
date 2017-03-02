@@ -26,7 +26,7 @@ module.exports = {
       }
       else if (user === null){
         console.log('user not found',user);
-        response.json({errors:'User not found. Please register!'});
+        response.json({errors:'Please register!'});
       }
       else{
         if (user.password === request.body.password){
