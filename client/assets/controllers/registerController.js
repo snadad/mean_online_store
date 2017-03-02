@@ -1,5 +1,5 @@
 console.log('registerController has started');
-app.controller('registerController', ['$scope','loginFactory','$routeParams', '$location', function($scope, loginFactory, $routeParams, $location) {
+app.controller('registerController', ['$scope','loginFactory','$cookieStore','$routeParams', '$location', function($scope, $cookieStore, loginFactory, $routeParams, $location) {
 $scope.errors = [];
 $scope.create = function(){
   loginFactory.create($scope.newUser, function(data){

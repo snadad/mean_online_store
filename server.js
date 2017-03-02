@@ -1,11 +1,11 @@
 
 var express = require("express");
-var session = require('express-session');
 var path = require("path");
 var app = express();
 var bodyParser = require('body-parser');
 
-app.use(session({secret: 'thisisapassword'}));
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('client'));
 // app.set('views', path.join(__dirname, './views'));

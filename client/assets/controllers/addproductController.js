@@ -1,5 +1,5 @@
 console.log('addProductController has started');
-app.controller('addProductController', ['$scope','productFactory','$routeParams', '$location', function($scope, productFactory, $routeParams, $location) {
+app.controller('addProductController', ['$scope', '$cookieStore','productFactory','$routeParams', '$location', function($scope, $cookieStore, productFactory, $routeParams, $location) {
 
   $scope.addProduct = function(){
     productFactory.addProduct($scope.newProduct, function(data){

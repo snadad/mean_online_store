@@ -13,7 +13,7 @@ module.exports = {
         console.log('user created', data);
         console.log('logging the id', data._id);
         request.session.user_id = data._id;
-        request.session.first_name = data.first_name;
+        request.session.user_name = data.first_name;
         response.json(data);
       }
     })
@@ -30,8 +30,6 @@ module.exports = {
       }
       else{
         if (user.password === request.body.password){
-          request.session.user_id = user._id;
-          request.session.name = user.first_name;
           response.json(user)
         }
         else{

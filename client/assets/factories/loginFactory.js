@@ -1,11 +1,14 @@
 console.log('loginFactory has started');
-app.factory('loginFactory', ['$http', function($http) {
+app.factory('loginFactory', ['$http','$cookieStore', function($http, $cookieStore) {
   var factory = {};
 
   factory.login = function(user, callback) {
     $http.post('/login', user).then(function(response){
       if(typeof callback === 'function'){
-        callback(response.data);
+        $cookieStore.user_name = response.data.first_name;
+        $cookieStore.user_id = response.data._id;
+
+        callback(response.data, $cookieStore);
       }
     })
   }
