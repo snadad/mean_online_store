@@ -1,12 +1,23 @@
 console.log('dashboardController has started');
-app.controller('dashboardController', function($scope, productFactory, $routeParams) {
-
+app.controller('dashboardController', function($scope, productFactory, $routeParams, $cookieStore, $location) {
+  $scope.user_name = $cookieStore.get('user_name')
+  $scope.user_id = $cookieStore.get('user_id')
+  $scope.addproduct;
   $scope.productList = [];
-  //{name: "test1", price:14.50},{name: "bowl2", price:49.99}
    productFactory.index( function(returnedData){
      $scope.productList = returnedData;
    });
-  //  $scope.update = function(){
+   if ($scope.user_name === 'admin'){
+     console.log('Admin!');
+     $scope.addproduct = 'Add Product'
+   }
+   $scope.addthis = function() {
+     $location.url('/addproduct')
+   }
+
+
+
+    //  $scope.update = function(){
   //    loginFactory.update($scope.friend, function(data){
   //      $scope.friend = data
   //    })

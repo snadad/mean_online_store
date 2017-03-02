@@ -3,7 +3,12 @@
   <h2>Hot Phone Sales!</h2>
   <p>Purchase supplies in bulk at the best discounts!</p>
 </div>
+<h1>Welcome, {{user_name}}!</h1>
+<form ng-submit ="addthis()">
+  
+  <input type="submit" value="{{addproduct}}">
 
+</form>
 
 <div ng-repeat="n in productList" class='item'>
     <h4>{{n.name}}</h4>
