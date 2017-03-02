@@ -11,9 +11,6 @@ module.exports = {
       }
       else{
         console.log('user created', data);
-        console.log('logging the id', data._id);
-        request.session.user_id = data._id;
-        request.session.user_name = data.first_name;
         response.json(data);
       }
     })

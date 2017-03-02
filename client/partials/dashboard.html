@@ -3,7 +3,12 @@
   <h1>Hacker Toys</h1>
   <p>The latest tech mechandise for your tinkering needs!</p>
 </div>
+<h1>Welcome, {{user_name}}!</h1>
+<form ng-submit ="addthis()">
+  
+  <input type="submit" value="{{addproduct}}">
 
+</form>
 
 <div ng-repeat="n in productList | orderBy: 'created_at':true"  class='item hacker-font'>
     <h4>{{n.name}}</h4>
