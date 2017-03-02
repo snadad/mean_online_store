@@ -35,27 +35,44 @@ adminPa$$word1
       width: 400px;
     }
     .main-banner {
-      background-image: url("https://image.freepik.com/free-vector/abstract-background-of-cyber-monday_23-2147576722.jpg");
-      background-size: 1150px;
+      background-image: url("http://i.imgur.com/E7A2X7i.jpg");
       background-position: center;
+      color: white;
+      text-shadow: -2px 0 green, 0 2px blue, 1px 0 red, 0 -1px orange;
+    }
+    .hacker-font {
+      color: slategrey;
     }
     .item {
       width: 300px;
       height: 400px;
       padding: 10px;
       margin: 10px;
-      border: 1px solid lightgrey;
       display: inline-block;
       vertical-align: top;
-      border-radius: 5px;
     }
+    .border {
+      border: 1px solid grey;
+      border-radius: 4px;
+    }
+    .inner-card {
+      height: 240px;
+    }
+    .price-line {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .add-cart {
+      margin-top: 10px;
+    }
+
     </style>
 
   </head>
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-light">
-        <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-light bg-faded">
+        <a class="nav-link navbar-brand" href="#!/dashboard"  class="bg-faded">Products</a>
         <a class="nav-link navbar-brand" href="#">My Cart</a>
         <a class="nav-link navbar-brand" href="#!/login">Login</a>
         <a class="nav-link navbar-brand" href="#!/register">Register</a>

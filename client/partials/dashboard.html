@@ -1,15 +1,17 @@
 <div class="jumbotron text-center main-banner">
   <br>
-  <h2>Hot Phone Sales!</h2>
-  <p>Purchase supplies in bulk at the best discounts!</p>
+  <h1>Hacker Toys</h1>
+  <p>The latest tech mechandise for your tinkering needs!</p>
 </div>
 
 
-<div ng-repeat="n in productList" class='item'>
+<div ng-repeat="n in productList | orderBy: 'created_at':true"  class='item hacker-font'>
     <h4>{{n.name}}</h4>
-    <img src="{{n.image}}" class="auto-img" style="width: 100%"> <br>
-    Description: {{n.description}} <br>
-    Category {{n.category}} <br>
+    <div class="inner-card">
+    <img src="{{n.image}}" class="auto-img border" style="width: 100%"> <br>
+    </div>
+    {{n.description}} <br>
+    <h4 class="price-line">${{n.price}}</h4> <button class="btn-success pull-right price-line  add-cart"> Add to cart</button>
 </div>
 
 <br>

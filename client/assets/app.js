@@ -21,6 +21,10 @@ app.config(function ($routeProvider) {
       templateUrl: 'partials/dashboard.html',
       controller : 'dashboardController'
     })
+    .when('/cart',{
+      templateUrl: 'partials/cart.html',
+      controller : 'dashboardController'
+    })
     .otherwise({
       redirectTo: '/'
     })

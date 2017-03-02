@@ -29,5 +29,5 @@ var ProductSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide Image Link"]
         }
-})
+}, { timestamps: { createdAt: 'created_at' } })
 var Product = mongoose.model('Product', ProductSchema);
