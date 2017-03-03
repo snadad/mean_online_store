@@ -1,7 +1,8 @@
 
 
   <h5>Please login to continue shopping </h5>
-  admin@admin.com
+
+admin@admin.com <br>
 adminPa$$word1
 <br>
   <form ng-submit="login()" class="form-horizontal">
@@ -9,14 +10,20 @@ adminPa$$word1
     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
       <input type="email" class="form-control" ng-model="user.email" id="inputEmail3" placeholder="Email">
+
     </div>
+    <div class="form-group" >
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" ng-model="user.password" id="inputPassword3" placeholder="Password">
+      </div>
+      <span ng-if ="errors">
+      <div class="form-group has-error has-feedback">
+    <label class="control-label" for="inputError2">{{errors}}</label>
+    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+    <!-- <span id="inputError2Status" class="sr-only">{{errdors}}</span> -->
   </div>
-  <div class="form-group">
-    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" ng-model="user.password" id="inputPassword3" placeholder="Password">
-    </div>
-    {{errors}}
+  </span>
 
   </div>
   <div class="form-group">
