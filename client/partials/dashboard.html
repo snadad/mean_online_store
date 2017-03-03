@@ -1,24 +1,21 @@
-<div class="jumbotron text-center main-banner">
-  <br>
-  <h1>Hacker Toys</h1>
-  <p>The latest tech mechandise for your tinkering needs!</p>
-</div>
-<h1>Welcome, {{user_name}}!</h1>
-<form ng-submit ="addthis()">
-  
-  <input type="submit" value="{{addproduct}}">
-
-</form>
+<div class="dash-bg">
+  <div class="jumbotron text-center main-banner">
+    <br>
+    <h1>Hack3r Toys</h1>
+    <p>The latest tech mechandise for your tinkering needs!</p>
+  </div>
+<h5>Welcome, {{user_name}}!</h5>
 
 <div ng-repeat="n in productList | orderBy: 'created_at':true"  class='item hacker-font'>
-    <h4>{{n.name}}</h4>
+    <h4 class="text-center">{{n.name}}</h4>
     <div class="inner-card">
-    <img src="{{n.image}}" class="auto-img border" style="width: 100%"> <br>
+    <img src="{{n.image}}" class="auto-img border" style="width: 100%; height: 100%;">
     </div>
     {{n.description}} <br>
-    <h4 class="price-line">${{n.price}}</h4> <button class="btn-success pull-right price-line  add-cart"> Add to cart</button>
+    <h4 class="price-line">${{n.price}}</h4> <button class="btn-success pull-right price-line add-cart" ng-click="addCart(n)"> Add to cart</button>
 </div>
 
 <br>
 
 <br>
+</div>

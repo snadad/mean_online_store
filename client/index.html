@@ -4,6 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Awesome Online Store</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -26,14 +28,20 @@
     <script src="assets/controllers/addproductController.js" charset="utf-8"></script>
     <script src="assets/controllers/registerController.js" charset="utf-8"></script>
     <script src="assets/controllers/dashboardController.js" charset="utf-8"></script>
-    admin@admin.com
-adminPa$$word1
     <style>
     body {
       padding: 50px;
     }
     form {
       width: 400px;
+    }
+    td {
+      padding-right: 20px;
+      padding-bottom: 10px;
+    }
+    .brand-img {
+      width: 30px;
+      margin-top: -5px;
     }
     .main-banner {
       background-image: url("http://i.imgur.com/E7A2X7i.jpg");
@@ -66,26 +74,35 @@ adminPa$$word1
     .add-cart {
       margin-top: 10px;
     }
-
+    .small-img {
+      width: 90px;
+      box-shadow: 1px 1px 1px grey;
+      border-radius: 3px;
+    }
+    tr.space {
+      margin: 10px;
+      padding: 10px;
+    }
     </style>
 
   </head>
   <body>
 
 
-<div ng-controller ="navController"
+<div ng-controller ="navController">
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
+      <a class="navbar-brand"><img class=" brand-img" src="https://pbs.twimg.com/profile_images/3574577617/756c28bed8f618bf724c62b34af2d436.jpeg"></a>
         <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
-        <a class="nav-link navbar-brand" href="#">My Cart</a>
-        <a class="nav-link navbar-brand" href="#!/login">Login</a>
-        <a class="nav-link navbar-brand" href="#!/register">Register</a>
+        <a class="nav-link navbar-brand" href="#!/cart">My Cart</a>
         <span ng-if = "addproductbutton">
         <a  class="nav-link navbar-brand" href="#!/addproduct"><span ng-bind= "addproductbutton"></span></a>
       </span>
+      <a class="nav-link navbar-brand pull-right" href="#!/register">Register</a>
+      <a class="nav-link navbar-brand pull-right" href="#!/login">Login</a>
     </nav>
 </div>
 
-    <div ng-view = "">
+    <div ng-view="">
     </div>
 
   </body>

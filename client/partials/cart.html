@@ -1,1 +1,30 @@
-this is the cart.html page
+
+<br>
+
+<h3>My Shopping Cart </h3> <hr>
+<table>
+  <tr>
+  <th>Image</th>
+  <th>Product</th>
+  <th>Price</th>
+  <th>Remove</th>
+  </tr>
+
+  <tr ng-repeat="n in cart | orderBy: 'created_at':true" class="space">
+    <td><img src="{{n.image}}" class="small-img"></td>
+    <td>{{n.name}}</td>
+    <td class="text-center">$ {{n.price}}</td>
+    <td><button ng-click="removeItem(n)" class="text-center">X</button></td>
+  </tr>
+
+<tr>
+  <td></td>
+  <td></td>
+  <td class="price-line">
+    <h5 class="price-line">Total: ${{cart_total}} </h5>
+  </td>
+  <td>
+    <button ng-click="checkout()" class="btn-warning">Checkout</button>
+  </td>
+<tr>
+</table>

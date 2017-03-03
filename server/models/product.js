@@ -12,13 +12,8 @@ var ProductSchema = new mongoose.Schema({
     trim: true
   },
   category: { type: String,
-    enum: {
-      values: ['PHONE', 'PRINTER'],
-      message: 'Options are Phone and Printer!'
-    },
     uppercase: true,
     trim: true,
-    message: "Please choose form either phone or printer",
     required: [true, "Please choose a category"]
   },
   price: {
