@@ -1,17 +1,48 @@
 console.log('dashboardController has started');
-app.controller('dashboardController', function($scope, productFactory, $routeParams, $cookieStore, $location) {
+app.controller('dashboardController', function($scope, productFactory, loginFactory, $routeParams, $cookieStore, $location) {
   $scope.user_name = $cookieStore.get('user_name')
   $scope.user_id = $cookieStore.get('user_id')
   $scope.addproduct;
   $scope.productList = [];
   $scope.cart = $cookieStore.get('cart')
   $scope.cart_total = cartTotal()
+  $scope.addproductbutton = "";
+
+  showAdminMenu()
+
+  $scope.logoutClick = function(){
+    $cookieStore.remove("userloggedin")
+    $cookieStore.remove("cart")
+    $cookieStore.remove("user_name")
+    $cookieStore.remove("user_id")
+    $location.url('/dashboard')
+  }
+
+  function showAdminMenu(){
+    if($scope.user_name === 'admin'){
+      // $scope.addproductbutton = 'Add Product'
+      $(".add-product").show()
+    } else {
+      $(".add-product").hide()
+    }
+  }
+console.log("cookiestore userloggedin ",$cookieStore.userloggedin)
+    if($cookieStore.get("userloggedin")){
+      $(".login-toggle").hide()
+      $(".logout-toggle").show()
+    } else {
+      $(".login-toggle").show()
+      $(".logout-toggle").hide()
+    }
+
 
   function cartTotal(){
     var sum = 0;
-    for(var i=0; i < $scope.cart.length; i++){
-        sum += Number($scope.cart[i].price)
-    }
+      if ($cookieStore.get('cart')){
+        for(var i=0; i < $scope.cart.length; i++){
+            sum += Number($scope.cart[i].price)
+        }
+      }
     return sum;
   }
 
@@ -34,7 +65,10 @@ app.controller('dashboardController', function($scope, productFactory, $routePar
      var array = $cookieStore.get('cart');
      array.push(n);
      $cookieStore.put('cart', array);
-    console.log("this is cookieStore.get(cart): ", $cookieStore.get('cart'))
+
+     alert("Item added!")
+     $scope.cartItemNum = $cookieStore.get('cart').length
+
    }
 
    $scope.removeItem = function(item){

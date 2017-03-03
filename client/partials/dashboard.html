@@ -4,9 +4,11 @@
     <h1>Hack3r Toys</h1>
     <p>The latest tech mechandise for your tinkering needs!</p>
   </div>
-<h5>Welcome, {{user_name}}!</h5>
 
-<div ng-repeat="n in productList | orderBy: 'created_at':true"  class='item hacker-font'>
+<div class="logout-toggle"><h5>Welcome, {{user_name}}!</h5></div> Search: <input type="text" ng-model="filter_name">
+<br>
+<!-- <div id="flash">Item added to cart!</div> -->
+<div ng-repeat="n in productList | orderBy: 'created_at':true | filter:filter_name as results"  class='item hacker-font'>
     <h4 class="text-center">{{n.name}}</h4>
     <div class="inner-card">
     <img src="{{n.image}}" class="auto-img border" style="width: 100%; height: 100%;">

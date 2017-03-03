@@ -74,31 +74,44 @@
     .add-cart {
       margin-top: 10px;
     }
+    .cart-item-num {
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 1px 5px 1px 5px;
+    }
     .small-img {
       width: 90px;
       box-shadow: 1px 1px 1px grey;
       border-radius: 3px;
     }
-    tr.space {
-      margin: 10px;
-      padding: 10px;
+    .add-product {
+      display: none
     }
+    .login-toggle {
+      display: none
+    }
+    .logout-toggle {
+      display: none
+    }
+
     </style>
 
   </head>
   <body>
+<!-- <span class="cart-item-num">{{cartItemNum}}</span> -->
 
-
-<div ng-controller ="navController">
+<div ng-controller ="dashboardController">
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
-      <a class="navbar-brand"><img class=" brand-img" src="https://pbs.twimg.com/profile_images/3574577617/756c28bed8f618bf724c62b34af2d436.jpeg"></a>
+      <a class="navbar-brand" href="#!/dashboard"><img class="brand-img" src="https://pbs.twimg.com/profile_images/3574577617/756c28bed8f618bf724c62b34af2d436.jpeg"></a>
         <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
-        <a class="nav-link navbar-brand" href="#!/cart">My Cart</a>
-        <span ng-if = "addproductbutton">
-        <a  class="nav-link navbar-brand" href="#!/addproduct"><span ng-bind= "addproductbutton"></span></a>
-      </span>
+        <a class="nav-link navbar-brand" href="#!/cart">My Cart </a>
+
+        <a  class="nav-link navbar-brand add-product" href="#!/addproduct">Add Product</a>
+
       <a class="nav-link navbar-brand pull-right" href="#!/register">Register</a>
-      <a class="nav-link navbar-brand pull-right" href="#!/login">Login</a>
+      <a class="nav-link navbar-brand pull-right logout-toggle" href="#!/logout" ng-click="logoutClick()">Log Out</a>
+      <a class="nav-link navbar-brand pull-right login-toggle" href="#!/login">Login</a>
     </nav>
 </div>
 
