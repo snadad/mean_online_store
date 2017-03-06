@@ -82,12 +82,4 @@ console.log("cookiestore userloggedin ",$cookieStore.userloggedin)
      console.log("cookiecart: ", $cookieStore.get('cart'))
    }
 
-
-    //  $scope.update = function(){
-  //    loginFactory.update($scope.friend, function(data){
-  //      $scope.friend = data
-  //    })
-  //   //
-  //    }
-
 });
