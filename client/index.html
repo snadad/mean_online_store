@@ -85,15 +85,6 @@
       box-shadow: 1px 1px 1px grey;
       border-radius: 3px;
     }
-    .add-product {
-      display: none
-    }
-    .login-toggle {
-      display: none
-    }
-    .logout-toggle {
-      display: none
-    }
 
     </style>
 
@@ -104,10 +95,9 @@
 <div ng-controller ="dashboardController">
     <nav class="navbar navbar-default navbar-fixed-top navbar-light">
       <a class="navbar-brand" href="#!/dashboard"><img class="brand-img" src="https://pbs.twimg.com/profile_images/3574577617/756c28bed8f618bf724c62b34af2d436.jpeg"></a>
-        <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
-        <a class="nav-link navbar-brand" href="#!/cart">My Cart </a>
-
-        <a  class="nav-link navbar-brand add-product" href="#!/addproduct">Add Product</a>
+      <a class="nav-link navbar-brand" href="#!/dashboard">Products</a>
+      <a class="nav-link navbar-brand" href="#!/cart">My Cart <span class="cart-item-num"></span></a>
+      <a  class="nav-link navbar-brand add-product" href="#!/addproduct">Add Product</a>
 
       <a class="nav-link navbar-brand pull-right" href="#!/register">Register</a>
       <a class="nav-link navbar-brand pull-right logout-toggle" href="#!/logout" ng-click="logoutClick()">Log Out</a>
